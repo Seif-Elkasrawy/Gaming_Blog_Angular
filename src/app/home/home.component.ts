@@ -15,7 +15,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getGamingNews().subscribe((data: any) => {
-      console.log(data)
+      console.log(data);
+
+      this.gamingNews = data.results;
     })
   }
 

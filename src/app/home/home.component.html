@@ -17,10 +17,10 @@
 						<div class="row" *ngIf="gamingNews">
 							<div class="col-lg-4 col-sm-12-my-3" *ngFor="let gnews of gamingNews">
 								<div class="card" style="width: 21rem;">
-									<img [src]="gnews['urlToImage']" class="card-img-top" alt="...">
+									<img [src]="gnews['image_background']" class="card-img-top" alt="...">
 									<div class="card-body">
-										<h5 class="card-title">Card title</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+										<h5 class="card-title">{{gnews['name']}}</h5>
+										<p class="card-text text-primary">{{gnews['released']}}</p>
 										<a [href]="gnews['url']" class="btn btn-dark">Go somewhere</a>
 									  </div>
 								</div>
