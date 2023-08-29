@@ -103,7 +103,7 @@
 			<h2>Recent Games</h2>
 		</div>
 		<div class="row" *ngIf="gamingNews">
-			<div class="col-lg-4 col-md-6 my-3" *ngFor="let gnews of gamingNews; let i = index">
+			<div class="col-lg-4 col-md-6 my-3" *ngFor="let gnews of gamingNews">
 				<div class="card" style="width: 21rem;">
 					<img [src]="gnews['image_background']" class="card-img-top" alt="...">
 					<div class="card-body">
