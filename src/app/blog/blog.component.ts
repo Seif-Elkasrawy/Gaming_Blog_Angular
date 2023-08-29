@@ -10,13 +10,21 @@ export class BlogComponent implements OnInit {
 
   constructor(private service: GamingNewsService) { }
 
-  rapidNews: any = [];
+  epicNews: any = [];
+
+  epicNewsCS: any = [];
 
   ngOnInit(){
-    this.service.getRapidNews().subscribe((data: any) => {
+    this.service.getEpicNews().subscribe((data: any) => {
       console.log(data);
 
-      this.rapidNews = data;
+      this.epicNews = data;
+    });
+
+    this.service.getEpicNewsCS().subscribe((data: any) => {
+      console.log(data);
+
+      this.epicNewsCS = data;
     });
   }
 }
