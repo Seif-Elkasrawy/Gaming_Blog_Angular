@@ -14,8 +14,8 @@
 </div>
 <!-- Latest news section end -->
 
-
-<section>
+<!-- gamespot -->
+<section id="gameSpot">
     <div class="container">
         <div class="row" *ngIf="epicNews && epicNewsCS">
             <div class="col-lg-4 col-md-6 my-3" *ngFor="let eNews of epicNews">
@@ -42,6 +42,18 @@
                 </div>
             </div>
         </div>
+		<div class="row" *ngIf="gameSpot ">
+			<div class="col-lg-4 col-md-6 my-3" *ngFor="let rnews of gameSpot  ">
+				<div class="card"  style="width: 21rem;">
+					<img [src]="rnews['img']" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{rnews['name'].__cdata}}</h5>
+						<p class="card-text text-primary">{{rnews['description'].__cdata}}</p>
+						<a [href]="rnews['url']" class="btn btn-dark">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 </section>
 

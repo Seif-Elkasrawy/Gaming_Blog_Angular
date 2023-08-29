@@ -11,10 +11,12 @@ export class BlogComponent implements OnInit {
   constructor(private service: GamingNewsService) { }
 
   epicNews: any = [];
-
   epicNewsCS: any = [];
 
-  ngOnInit(){
+  gameSpotArticles: any = [];
+  gameReviews: any = [];
+
+  ngOnInit() {
     this.service.getEpicNews().subscribe((data: any) => {
       console.log(data);
 
@@ -26,5 +28,18 @@ export class BlogComponent implements OnInit {
 
       this.epicNewsCS = data;
     });
+
+    this.service.getArticles().subscribe((data: any) => {
+      console.log(data.response.results.article);
+
+      this.gameSpotArticles = data.response.results.game
+    });
+
+    this.service.getReviews().subscribe((data: any) => {
+      console.log(data.response.results.review);
+
+    });
+
+
   }
 }
