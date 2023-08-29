@@ -12,6 +12,24 @@
 <!-- Latest news section end -->
 
 
+<section>
+    <div class="container">
+		<div class="row" *ngIf="rapidNews">
+			<div class="col-lg-4 col-md-6 my-3" *ngFor="let rnews of rapidNews">
+				<div class="card" style="width: 21rem;">
+					<img [src]="rnews['offerImageWide']" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{rnews['name']}}</h5>
+						<p class="card-text text-primary">{{rnews['description']}}</p>
+                        <p class="card-text">{{rnews['currencyCode']}} {{rnews['originalPrice'] | currency}}</p>
+						<a [href]="rnews['url']" class="btn btn-dark">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</section>
+
 <!-- Page info section -->
 <section class="page-info-section set-bg" data-setbg="../../assets/img/page-top-bg/1.jpg">
     <div class="pi-content">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamingNewsService } from '../gaming-news.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,9 +12,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private service: GamingNewsService) { }
 
-  gamingNews : any = [];
+  gamingNews: any = [];
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // API Call
+
     this.service.getGamingNews().subscribe((data: any) => {
       console.log(data);
 
