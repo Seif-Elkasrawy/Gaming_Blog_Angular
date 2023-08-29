@@ -27,6 +27,9 @@ export class GamingNewsService {
   getArticles():any {
     return this.httpClient.get('https://mocki.io/v1/1c020d3f-7c91-45d0-ac7f-52f876a4e2d5')
   }
+  getReviews() :any {
+    return this.httpClient.get('https://mocki.io/v1/3832ccbb-63f7-4b61-aee9-4a18cee283f4')
+  }
   
 
   

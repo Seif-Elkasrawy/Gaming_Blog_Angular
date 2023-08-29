@@ -18,9 +18,12 @@ gameReviews :any = []
 
   ngOnInit(){
     this.service.getArticles().subscribe((data: any) => {
-      console.log(data.response.results.game);
+      console.log(data.response.results.article);
       this.gameSpotArticles = data.response.results.game
     });
+    this.service.getReviews().subscribe((data :any) => {
+      console.log(data.response.results.review)
+    })
   }
   
 }
