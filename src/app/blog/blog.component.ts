@@ -32,12 +32,13 @@ export class BlogComponent implements OnInit {
     this.service.getArticles().subscribe((data: any) => {
       console.log(data.response.results.article);
 
-      this.gameSpotArticles = data.response.results.game
+      this.gameSpotArticles = data.response.results.article
     });
 
     this.service.getReviews().subscribe((data: any) => {
       console.log(data.response.results.review);
 
+      this.gameReviews = data.response.results.review
     });
 
 
