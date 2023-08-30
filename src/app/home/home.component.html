@@ -122,99 +122,63 @@
 <!-- Tournaments section -->
 <section class="tournaments-section spad">
 	<div class="container">
-		<div class="tournament-title">Tournaments</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="tournament-item mb-4 mb-lg-0">
-					<div class="ti-notic">Premium Tournament</div>
-					<div class="ti-content">
-						<div class="ti-thumb set-bg" data-setbg="../../assets/img/tournament/1.jpg"></div>
-						<div class="ti-text">
-							<h4>World Of WarCraft</h4>
-							<ul>
-								<li><span>Tournament Beggins:</span> June 20, 2018</li>
-								<li><span>Tounament Ends:</span> July 01, 2018</li>
-								<li><span>Participants:</span> 10 teams</li>
-								<li><span>Tournament Author:</span> Admin</li>
-							</ul>
-							<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+		<div class="tournament-title">Free Games</div>
+		<div class="row" *ngIf="epicNews && epicNewsCS">
+			<div class="col-md-4" *ngFor="let eNews of epicNews">
+				<a [href]="eNews['appUrl']" target="_blank">
+					<div class="tournament-item mb-4 mb-lg-0">
+						<div class="ti-notic">Free now</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + eNews['offerImageTall'] + ')'}"></div>
+							<div class="ti-text">
+								<h4>{{eNews['name']}}</h4>
+								<ul>
+									<li><span>{{eNews['originalPrice']  | currency}}</span></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="col-md-6">
-				<div class="tournament-item">
-					<div class="ti-notic">Premium Tournament</div>
-					<div class="ti-content">
-						<div class="ti-thumb set-bg" data-setbg="../../assets/img/tournament/2.jpg"></div>
-						<div class="ti-text">
-							<h4>DOOM</h4>
-							<ul>
-								<li><span>Tournament Beggins:</span> June 20, 2018</li>
-								<li><span>Tounament Ends:</span> July 01, 2018</li>
-								<li><span>Participants:</span> 10 teams</li>
-								<li><span>Tournament Author:</span> Admin</li>
-							</ul>
-							<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+			<div class="col-md-4" *ngFor="let eCSNews of epicNewsCS">
+				<a [href]="eCSNews['appUrl']" target="_blank">
+					<div class="tournament-item">
+						<div class="ti-notic">Coming soon</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + eCSNews['offerImageTall'] + ')'}"></div>
+							<div class="ti-text">
+								<h4>{{eCSNews['name']}}</h4>
+								<ul>
+									<li><span>{{eCSNews['originalPrice']  | currency}}</span></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
+
 			</div>
 		</div>
 	</div>
 </section>
 <!-- Tournaments section bg -->
 
-
 <!-- Review section -->
-<section class="review-section spad set-bg" data-setbg="../../assets/img/review-bg.png">
+<section class="review-section spad set-bg" style="background-image: url(../../assets/img/review-bg.png);">
 	<div class="container">
 		<div class="section-title">
 			<div class="cata new">new</div>
 			<h2>Recent Reviews</h2>
 		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="../../assets/img/review/1.jpg">
-						<div class="score yellow">9.3</div>
+		<div class="row" *ngIf="gameReviews">
+			<div class="col-lg-3 col-md-6" *ngFor="let rnews of gameReviews; let i = index">
+				<div class="review-item" *ngIf="i < 4">
+					<div class="review-cover set-bg" data-setbg="../../assets/img/review/1.jpg"
+						Style="background-image: url(../../assets/img/G_Spot.jpg);">
+						<div class="score yellow">{{rnews['score']}}</div>
 					</div>
 					<div class="review-text">
-						<h5>Assasin’’s Creed</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="../../assets/img/review/2.jpg">
-						<div class="score purple">9.5</div>
-					</div>
-					<div class="review-text">
-						<h5>Doom</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="../../assets/img/review/3.jpg">
-						<div class="score green">9.1</div>
-					</div>
-					<div class="review-text">
-						<h5>Overwatch</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="../../assets/img/review/4.jpg">
-						<div class="score pink">9.7</div>
-					</div>
-					<div class="review-text">
-						<h5>GTA</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						<a [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank"><h5>{{rnews['title'].__cdata}}</h5></a>
+						<p>{{rnews['deck'].__cdata}}</p>
 					</div>
 				</div>
 			</div>

@@ -13,7 +13,7 @@
 
 
 	<!-- Page info section -->
-	<section class="page-info-section set-bg" data-setbg="../../assets/img/page-top-bg/3.jpg">
+	<section class="page-info-section set-bg" style="background-image: url(../../assets/img/page-top-bg/3.jpg);">
 		<div class="pi-content">
 			<div class="container">
 				<div class="row">
@@ -150,54 +150,22 @@
 
 
 	<!-- Review section -->
-	<section class="review-section review-dark spad set-bg" data-setbg="../../assets/img/review-bg-2.jpg">
+	<section class="review-section review-dark spad set-bg" style="background-image: url(../../assets/img/review-bg-2.jpg);">
 		<div class="container">
 			<div class="section-title text-white">
 				<div class="cata new">new</div>
 				<h2>Recent Reviews</h2>
 			</div>
-			<div class="row text-white">
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="../../assets/img/review/1.jpg">
-							<div class="score yellow">9.3</div>
+			<div class="row text-white" *ngIf="gameReviews">
+				<div class="col-lg-3 col-md-6" *ngFor="let rnews of gameReviews; let i = index">
+					<div class="review-item" *ngIf="i < 4">
+						<div class="review-cover set-bg" data-setbg="../../assets/img/review/1.jpg"
+							Style="background-image: url(../../assets/img/G_Spot.jpg);">
+							<div class="score yellow">{{rnews['score']}}</div>
 						</div>
 						<div class="review-text">
-							<h5>Assasin’’s Creed</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="../../assets/img/review/2.jpg">
-							<div class="score purple">9.5</div>
-						</div>
-						<div class="review-text">
-							<h5>Doom</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="../../assets/img/review/3.jpg">
-							<div class="score green">9.1</div>
-						</div>
-						<div class="review-text">
-							<h5>Overwatch</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="../../assets/img/review/4.jpg">
-							<div class="score pink">9.7</div>
-						</div>
-						<div class="review-text">
-							<h5>GTA</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+							<a [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank"><h5>{{rnews['title'].__cdata}}</h5></a>
+							<p>{{rnews['deck'].__cdata}}</p>
 						</div>
 					</div>
 				</div>
