@@ -112,15 +112,15 @@ ol {
 .text-white span,
 .text-white li,
 .text-white a {
-	color: #fff;
+	color: #EBEBEB;
 }
 
 .rating i {
-	color: #fbb710;
+	color: #6F4A8E;
 }
 
 .rating .is-fade {
-	color: #e0e3e4;
+	color: #EBEBEB;
 }
 
 /*---------------------
@@ -138,7 +138,7 @@ ol {
 	border-radius: 50px;
 	font-weight: 500;
 	border: none;
-	background: #ffb320;
+	background: #6F4A8E;
 	cursor: pointer;
 }
 
@@ -156,16 +156,16 @@ ol {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 500;
-	color: #fff;
+	color: #EBEBEB;
 	padding: 6px 25px;
 }
 
 .cata.new {
-	background: #ff205f;
+	background: #6F4A8E;
 }
 
 .cata.strategy {
-	background: #4eae60;
+	background: #8CABFF;
 }
 
 .cata.racing {
@@ -184,7 +184,7 @@ ol {
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	background: #fff;
+	background: #EBEBEB;
 }
 
 .loader {
@@ -248,7 +248,7 @@ ol {
 	clear: both;
 	overflow: hidden;
 	padding: 18px 0;
-	border-bottom: 1px solid #ffb320;
+	border-bottom: 1px solid #6F4A8E;
 }
 
 .site-logo {
@@ -260,7 +260,7 @@ ol {
 .user-panel {
 	float: right;
 	font-weight: 500;
-	background: #ffb320;
+	background: #6F4A8E;
 	padding: 8px 28px;
 	border-radius: 30px;
 }
@@ -286,14 +286,14 @@ ol {
 .main-menu ul li a {
 	display: inline-block;
 	font-size: 16px;
-	color: #fff;
+	color: #EBEBEB;
 	margin-left: 35px;
 	font-weight: 500;
 	padding: 10px 5px;
 }
 
 .main-menu ul li a:hover {
-	color: #ffb320;
+	color: #6F4A8E;
 }
 
 .header-btn {
@@ -321,7 +321,7 @@ ol {
 }
 
 .hero-slider .hs-text h2 {
-	color: #fff;
+	color: #EBEBEB;
 	font-weight: 400;
 	font-size: 60px;
 	margin-bottom: 30px;
@@ -331,11 +331,11 @@ ol {
 }
 
 .hero-slider .hs-text h2 span {
-	color: #ffb320;
+	color: #6F4A8E;
 }
 
 .hero-slider .hs-text p {
-	color: #fff;
+	color: #EBEBEB;
 	margin-bottom: 30px;
 	position: relative;
 	position: relative;
@@ -396,7 +396,7 @@ ol {
 }
 
 .hero-slider .owl-dots .owl-dot.active {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 /*---------------------
@@ -423,8 +423,8 @@ ol {
 	padding-right: 66px;
 	font-size: 18px;
 	font-weight: 500;
-	color: #fff;
-	background: #ffb320;
+	color: #EBEBEB;
+	background: #6F4A8E;
 	z-index: 1;
 }
 
@@ -437,7 +437,7 @@ ol {
 
 .news-ticker-contant .nt-item {
 	margin-right: 35px;
-	color: #fff;
+	color: #EBEBEB;
 	display: inline-block;
 }
 
@@ -447,16 +447,16 @@ ol {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 500;
-	color: #fff;
+	color: #EBEBEB;
 	padding: 4px 20px;
 }
 
 .news-ticker-contant .nt-item span.new {
-	background: #ff205f;
+	background: #6F4A8E;
 }
 
 .news-ticker-contant .nt-item span.strategy {
-	background: #4eae60;
+	background: #8CABFF;
 }
 
 .news-ticker-contant .nt-item span.racing {
@@ -525,7 +525,7 @@ ol {
 
 .recent-game-item .rgi-content {
 	padding: 34px 22px 20px;
-	background: #fff;
+	background: #EBEBEB;
 	border: 1px solid #d6dee7;
 	border-top: none;
 	position: relative;
@@ -558,11 +558,11 @@ ol {
 }
 
 .recent-game-item .rgi-extra .rgi-star {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .recent-game-item .rgi-extra .rgi-heart {
-	background: #ff205f;
+	background: #6F4A8E;
 }
 
 /*----------------------
@@ -579,7 +579,7 @@ ol {
 	padding: 7px 25px;
 	font-size: 12px;
 	font-weight: 500;
-	color: #fff;
+	color: #EBEBEB;
 	text-transform: uppercase;
 	background: #fb6e10;
 }
@@ -595,7 +595,7 @@ ol {
 	font-weight: 700;
 	color: #131313;
 	text-transform: uppercase;
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .tournament-item .ti-content {
@@ -614,7 +614,7 @@ ol {
 }
 
 .tournament-item .ti-text h4 {
-	color: #ffb320;
+	color: #6F4A8E;
 	margin-bottom: 20px;
 }
 
@@ -624,7 +624,7 @@ ol {
 }
 
 .tournament-item .ti-text ul li {
-	color: #fff;
+	color: #EBEBEB;
 	font-size: 12px;
 	margin-bottom: 6px;
 }
@@ -640,7 +640,7 @@ ol {
 
 .tournament-item .ti-text p span {
 	font-weight: 500;
-	color: #ffb320;
+	color: #6F4A8E;
 }
 
 /*----------------------
@@ -666,14 +666,14 @@ ol {
 	padding-top: 15px;
 	font-size: 18px;
 	font-weight: 500;
-	color: #fff;
+	color: #EBEBEB;
 	text-align: center;
 	border-radius: 50%;
 	z-index: 1;
 }
 
 .review-item .review-cover .score.yellow {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .review-item .review-cover .score.purple {
@@ -681,11 +681,11 @@ ol {
 }
 
 .review-item .review-cover .score.pink {
-	background: #ff20ae;
+	background: #4477CE;
 }
 
 .review-item .review-cover .score.green {
-	background: #4eae60;
+	background: #8CABFF;
 }
 
 .review-item .review-text {
@@ -740,7 +740,7 @@ ol {
 }
 
 .footer-widget .fw-title {
-	color: #fff;
+	color: #EBEBEB;
 	margin-bottom: 40px;
 }
 
@@ -761,7 +761,7 @@ ol {
 
 .latest-blog .lb-item .lb-content .lb-date {
 	font-size: 12px;
-	color: #ffb320;
+	color: #6F4A8E;
 	margin-bottom: 8px;
 }
 
@@ -804,7 +804,7 @@ ol {
 }
 
 .top-comment .tc-item .tc-content p a {
-	color: #ff205f;
+	color: #b585dd;
 }
 
 .top-comment .tc-item .tc-content p span {
@@ -813,7 +813,7 @@ ol {
 
 .top-comment .tc-item .tc-content .tc-date {
 	font-size: 12px;
-	color: #ffb320;
+	color: #6F4A8E;
 }
 
 /*----------------------
@@ -893,7 +893,7 @@ ol {
 }
 
 .site-pagination .active {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .site-pagination.sp-style-2 a,
@@ -902,7 +902,7 @@ ol {
 }
 
 .site-pagination.sp-style-2 .active {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .widget-item {
@@ -1000,11 +1000,11 @@ ol {
 }
 
 .single-blog-page .blog-thumb .rgi-extra .rgi-star {
-	background: #ffb320;
+	background: #6F4A8E;
 }
 
 .single-blog-page .blog-thumb .rgi-extra .rgi-heart {
-	background: #ff205f;
+	background: #6F4A8E;
 }
 
 .single-blog-page .blog-content h3 {
@@ -1058,7 +1058,7 @@ ol {
 }
 
 .comment-list .comment .comment-content h5 span {
-	color: #ffb320;
+	color: #6F4A8E;
 	padding-left: 18px;
 }
 
@@ -1154,7 +1154,7 @@ ol {
 
 .community-post-list .community-post .post-content h5 {
 	font-size: 16px;
-	color: #ff205f;
+	color: #6F4A8E;
 	font-weight: 400;
 	margin-bottom: 10px;
 }
@@ -1165,13 +1165,13 @@ ol {
 }
 
 .community-post-list .community-post .post-content p {
-	color: #fff;
+	color: #EBEBEB;
 	margin-bottom: 5px;
 }
 
 .community-post-list .community-post .post-content .post-date {
 	font-size: 12px;
-	color: #ffb320;
+	color: #6F4A8E;
 	margin-bottom: 18px;
 }
 
@@ -1229,7 +1229,7 @@ ol {
 	float: left;
 	font-size: 16px;
 	font-weight: 700;
-	color: #ffb320;
+	color: #6F4A8E;
 }
 
 .contact-info-list .cf-right {
@@ -1362,7 +1362,7 @@ ol {
 		top: calc(100% + 24px);
 		left: 0;
 		width: 100%;
-		background: #ffffff;
+		background: #EBEBEB;
 		z-index: 999;
 	}
 	.main-menu ul li {
@@ -1375,7 +1375,7 @@ ol {
 		padding: 13px 26px;
 	}
 	.nav-switch {
-		color: #fff;
+		color: #EBEBEB;
 		display: block;
 		float: right;
 		cursor: pointer;
