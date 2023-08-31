@@ -37,171 +37,43 @@
 
 
     <!-- Page section -->
-    <section class="page-section recent-game-page spad">
+    <section class="page-section recent-game-page spad" *ngIf="gameSpotArticles">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/1.jpg">
-                                    <div class="cata new">racing</div>
+                <div class="col-lg-8" >
+                    <div class="row ">
+                        <div class="col-md-6" *ngFor="let article of gameSpotArticles ;let i = index">
+                            <a class="text-decoration-none" [href]="sanitize(article['site_detail_url'].__cdata)" target="_blank">
+                            <div class="recent-game-item" *ngIf="i <8">
+                                <div class="rgi-thumb set-bg"
+                                    [ngStyle]="{ 'background-image': 'url(' + article['image'].screen_tiny.__cdata + ')'}">
                                 </div>
                                 <div class="rgi-content">
-                                    <h5>Suspendisse ut justo tem por, rutrum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
+                                    <h5>{{article['title'].__cdata}}</h5>
+                                    <p>{{article['deck'].__cdata}} </p>
+                                    <h6>Author {{article['authors'].__cdata}} </h6>
+
                                     <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
+                                        <a href="">
+                                            <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt="">
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt="">
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/2.jpg">
-                                    <div class="cata racing">racing</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/3.jpg">
-                                    <div class="cata adventure">Adventure</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/4.jpg">
-                                    <div class="cata new">racing</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Suspendisse ut justo tem por, rutrum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/5.jpg">
-                                    <div class="cata racing">racing</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/6.jpg">
-                                    <div class="cata adventure">Adventure</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/7.jpg">
-                                    <div class="cata new">racing</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Suspendisse ut justo tem por, rutrum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="../../assets/img/recent-game/8.jpg">
-                                    <div class="cata racing">racing</div>
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum
-                                        dolor sit amet, consectetur
-                                        elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-                                    <div class="rgi-extra">
-                                        <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
-                                        <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
+                        </a>
                         </div>
                     </div>
-                    <div class="site-pagination">
-                        <span class="active">01.</span>
-                        <a href="#">02.</a>
-                        <a href="#">03.</a>
-                    </div>
+
                 </div>
                 <!-- sidebar -->
                 <div class="col-lg-4 col-md-7 sidebar pt-5 pt-lg-0">
                     <!-- widget -->
-                    <div class="widget-item">
-                        <form class="search-widget">
-                            <input type="text" placeholder="Search">
-                            <button><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
+                  
                     <!-- widget -->
                     <div class="widget-item">
                         <h4 class="widget-title">Latest Posts</h4>
@@ -263,29 +135,22 @@
                         </div>
                     </div>
                     <!-- widget -->
-                    <div class="widget-item">
-                        <div class="feature-item set-bg" data-setbg="../../assets/img/features/1.jpg">
-                            <span class="cata new">new</span>
-                            <div class="fi-content text-white">
-                                <h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <a href="#" class="fi-comment">3 Comments</a>
+                    <div class="mb-4"  *ngFor="let article of gameSpotArticles ;let i = index ">
+                        <div class="widget-item" *ngIf="i >=98">
+                            <a [href]="sanitize(article['site_detail_url'].__cdata)" target="_blank">
+                            <div class="feature-item set-bg"  [ngStyle]="{ 'background-image': 'url(' + article['image'].original.__cdata + ')'}" >
+                                <span class="cata new">new</span>
+                                <div class="fi-content text-white">
+                                    <h5>{{article['title'].__cdata}}</h5>
+                                    <p>{{article['deck'].__cdata}} </p>
+                                    <h6>Author {{article['authors'].__cdata}}</h6>
+                                </div>
                             </div>
+                        </a>
                         </div>
                     </div>
                     <!-- widget -->
-                    <div class="widget-item">
-                        <div class="review-item">
-                            <div class="review-cover set-bg" data-setbg="../../assets/img/review/1.jpg">
-                                <div class="score yellow">9.3</div>
-                            </div>
-                            <div class="review-text">
-                                <h5>Assasin’’s Creed</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor
-                                    sit ame.</p>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>

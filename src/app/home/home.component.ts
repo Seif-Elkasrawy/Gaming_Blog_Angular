@@ -25,14 +25,20 @@ export class HomeComponent implements OnInit {
 
     this.service.getEpicNews().subscribe((data: any) => {
       console.log(data);
-
       this.epicNews = data;
+      for (let i = 0; i< this.epicNews.length ;i++){
+        this.epicNews[i].originalPrice =(this.epicNews[i].originalPrice/100).toFixed(2)
+      }
+    
     });
 
     this.service.getEpicNewsCS().subscribe((data: any) => {
       console.log(data);
 
       this.epicNewsCS = data;
+      for (let i = 0; i< this.epicNewsCS.length ;i++){
+        this.epicNewsCS[i].originalPrice =(this.epicNewsCS[i].originalPrice/100).toFixed(2)
+      }
     });
 
     this.service.getGamingNews().subscribe((data: any) => {

@@ -1,6 +1,6 @@
 <!-- Hero section -->
 <section class="hero-section">
-	<div class="hero-slider owl-carousel">
+	<div class="hero-slider owl-carousel ">
 		<div class="hs-item set-bg" style="background-image: url(../../assets/img/slider-1.jpg);">
 			<div class="hs-text">
 				<div class="container">
@@ -125,7 +125,7 @@
 		<div class="tournament-title">Free Games</div>
 		<div class="row" *ngIf="epicNews && epicNewsCS">
 			<div class="col-md-4" *ngFor="let eNews of epicNews">
-				<a [href]="eNews['appUrl']" target="_blank">
+				<a class="text-decoration-none" [href]="eNews['appUrl']" target="_blank">
 					<div class="tournament-item mb-4 mb-lg-0">
 						<div class="ti-notic">Free now</div>
 						<div class="ti-content">

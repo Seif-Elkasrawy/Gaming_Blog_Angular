@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamingNewsService } from '../gaming-news.service';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-blog',
@@ -8,7 +10,7 @@ import { GamingNewsService } from '../gaming-news.service';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(private service: GamingNewsService) { }
+  constructor(private service: GamingNewsService,private sanitizer: DomSanitizer) { }
 
   gameSpotArticles: any = [];
   gameReviews: any = [];
@@ -25,8 +27,11 @@ export class BlogComponent implements OnInit {
       console.log(data.response.results.review);
 
       this.gameReviews = data.response.results.review
-    });
+    }); 
 
 
+  }
+  sanitize(url: string) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 }
