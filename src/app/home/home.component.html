@@ -1,6 +1,12 @@
 <!-- Hero section -->
 <section class="hero-section">
-	<div class="hero-slider owl-carousel ">
+	<div class="hero-slider owl-carousel">
+		<div class="hs-item set-bg">
+			<iframe width="100%" height="865px"
+				src="https://www.youtube.com/embed/rqvCz_rnEMY?si=hdINf_Wewz_VK7w4&autoplay=1&mute=1&amp;controls=0"
+				title="YouTube video player" frameborder="0">
+			</iframe>
+		</div>
 		<div class="hs-item set-bg" style="background-image: url(../../assets/img/slider-1.jpg);">
 			<div class="hs-text">
 				<div class="container">
@@ -50,42 +56,38 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" data-setbg="../../assets/img/features/1.jpg">
+				<div class="feature-item set-bg" style="background-image: url(../../assets/img/features/1.jpg);">
 					<span class="cata new">new</span>
 					<div class="fi-content text-white">
-						<h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
+						<h5><a href="#">World Of Warcraft</a></h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-						<a href="#" class="fi-comment">3 Comments</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" data-setbg="../../assets/img/features/2.jpg">
+				<div class="feature-item set-bg" style="background-image: url(../../assets/img/features/2.jpg);">
 					<span class="cata strategy">strategy</span>
 					<div class="fi-content text-white">
 						<h5><a href="#">Justo tempor, rutrum erat id, molestie</a></h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-						<a href="#" class="fi-comment">3 Comments</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" data-setbg="../../assets/img/features/3.jpg">
+				<div class="feature-item set-bg" style="background-image: url(../../assets/img/features/3.jpg);">
 					<span class="cata new">new</span>
 					<div class="fi-content text-white">
 						<h5><a href="#">Nullam lacinia ex eleifend orci porttitor</a></h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-						<a href="#" class="fi-comment">3 Comments</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" data-setbg="../../assets/img/features/4.jpg">
+				<div class="feature-item set-bg" style="background-image: url(../../assets/img/features/4.jpg);">
 					<span class="cata racing">racing</span>
 					<div class="fi-content text-white">
 						<h5><a href="#">Lacinia ex eleifend orci suscipit</a></h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-						<a href="#" class="fi-comment">3 Comments</a>
 					</div>
 				</div>
 			</div>
@@ -99,17 +101,22 @@
 <section class="recent-game-section spad set-bg" data-setbg="../../assets/img/recent-game-bg.png">
 	<div class="container">
 		<div class="section-title">
-			<div class="cata new">new</div>
-			<h2>Recent Games</h2>
+			<div class="cata new">Highly rated</div>
+			<h2>Popular Games</h2>
 		</div>
 		<div class="row" *ngIf="gamingNews">
-			<div class="col-lg-4 col-md-6 my-3" *ngFor="let gnews of gamingNews">
-				<div class="card" style="width: 21rem;">
-					<img [src]="gnews['image_background']" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">{{gnews['name']}}</h5>
-						<p class="card-text text-primary">{{gnews['released']}}</p>
-						<a [href]="gnews['url']" class="btn btn-dark">Go somewhere</a>
+			<div class="col-lg-4 col-md-6" *ngFor="let gnews of gamingNews; let i = index">
+				<div class="recent-game-item" *ngIf="i < 9">
+					<div class="rgi-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + gnews['background_image'] + ')'}">
+						<div class="cata new">Highly rated</div>
+					</div>
+					<div class="rgi-content">
+						<h5>{{gnews['name']}}</h5>
+						<p>{{gnews['released']}}</p>
+						<div class="rgi-extra">
+							<div class="rgi-star"><img src="../../assets/img/icons/star.png" alt=""></div>
+							<div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -129,11 +136,12 @@
 					<div class="tournament-item mb-4 mb-lg-0">
 						<div class="ti-notic">Free now</div>
 						<div class="ti-content">
-							<div class="ti-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + eNews['offerImageTall'] + ')'}"></div>
+							<div class="ti-thumb set-bg"
+								[ngStyle]="{ 'background-image': 'url(' + eNews['offerImageTall'] + ')'}"></div>
 							<div class="ti-text">
 								<h4>{{eNews['name']}}</h4>
 								<ul>
-									<li><span>{{eNews['originalPrice']  | currency}}</span></li>
+									<li><span>{{eNews['originalPrice'] | currency}}</span></li>
 								</ul>
 							</div>
 						</div>
@@ -145,11 +153,12 @@
 					<div class="tournament-item">
 						<div class="ti-notic">Coming soon</div>
 						<div class="ti-content">
-							<div class="ti-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + eCSNews['offerImageTall'] + ')'}"></div>
+							<div class="ti-thumb set-bg"
+								[ngStyle]="{ 'background-image': 'url(' + eCSNews['offerImageTall'] + ')'}"></div>
 							<div class="ti-text">
 								<h4>{{eCSNews['name']}}</h4>
 								<ul>
-									<li><span>{{eCSNews['originalPrice']  | currency}}</span></li>
+									<li><span>{{eCSNews['originalPrice'] | currency}}</span></li>
 								</ul>
 							</div>
 						</div>
@@ -177,7 +186,9 @@
 						<div class="score yellow">{{rnews['score']}}</div>
 					</div>
 					<div class="review-text">
-						<a [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank"><h5>{{rnews['title'].__cdata}}</h5></a>
+						<a [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank">
+							<h5>{{rnews['title'].__cdata}}</h5>
+						</a>
 						<p>{{rnews['deck'].__cdata}}</p>
 					</div>
 				</div>

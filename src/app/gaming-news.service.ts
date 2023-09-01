@@ -25,7 +25,7 @@ export class GamingNewsService {
   }
 
   getGamingNews(): any {
-    return this.httpClient.get('https://api.rawg.io/api/genres?key=9cff31644d4545daa1e416c3a784e879');
+    return this.httpClient.get('https://api.rawg.io/api/games?key=9cff31644d4545daa1e416c3a784e879');
   }
 
   getArticles():any {
