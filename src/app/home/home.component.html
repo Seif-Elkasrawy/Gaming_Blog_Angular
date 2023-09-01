@@ -38,12 +38,27 @@
 <div class="latest-news-section">
 	<div class="ln-title">Latest News</div>
 	<div class="news-ticker">
-		<div class="news-ticker-contant">
-			<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		<div style="width: 100000px; transform: translateX(0px); animation: 13.1034s linear 0s infinite normal none running marqueeAnimation-3045020;"
+			class="js-marquee-wrapper">
+			<div class="js-marquee" style="margin-right: 20px; float: left;">
+				<div class="news-ticker-contant">
+					<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit. </div>
+					<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur
+						adipiscing elit. </div>
+					<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing
+						elit. </div>
+				</div>
 			</div>
-			<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit.
-			</div>
-			<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit.
+			<div class="js-marquee" style="margin-right: 20px; float: left;">
+				<div class="news-ticker-contant">
+					<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit. </div>
+					<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur
+						adipiscing elit. </div>
+					<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing
+						elit. </div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -107,7 +122,8 @@
 		<div class="row" *ngIf="gamingNews">
 			<div class="col-lg-4 col-md-6" *ngFor="let gnews of gamingNews; let i = index">
 				<div class="recent-game-item" *ngIf="i < 9">
-					<div class="rgi-thumb set-bg" [ngStyle]="{ 'background-image': 'url(' + gnews['background_image'] + ')'}">
+					<div class="rgi-thumb set-bg"
+						[ngStyle]="{ 'background-image': 'url(' + gnews['background_image'] + ')'}">
 						<div class="cata new">Highly rated</div>
 					</div>
 					<div class="rgi-content">

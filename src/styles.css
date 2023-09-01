@@ -571,7 +571,7 @@ ol {
 ------------------------*/
 
 .tournaments-section {
-	background-image: url("./assets/img/pattern.png");
+	background-image: url("./assets/img/colorkit.png");
 	background-repeat: repeat;
 }
 
@@ -586,7 +586,7 @@ ol {
 }
 
 .tournament-item {
-	background: #252525;
+	background: #1f2225;
 }
 
 .tournament-item .ti-notic {
@@ -714,7 +714,7 @@ ol {
 ------------------------*/
 
 .footer-top-section {
-	background-image: url("./assets/img/pattern.png");
+	background-image: url("./assets/img/colorkit.png");
 	background-repeat: repeat;
 	padding: 72px 0;
 }
@@ -736,8 +736,8 @@ ol {
 
 .footer-widget {
 	padding: 40px 30px 7px;
-	background: #252525;
-	border: 1px solid #4a4a4a;
+	background: #1f2225;
+	border: 1px solid #1f2225;
 }
 
 .footer-widget .fw-title {
@@ -824,7 +824,7 @@ ol {
 .footer-section {
 	padding: 18px 0 16px;
 	overflow: hidden;
-	background: #252525;
+	background: #1f2225;
 }
 
 .footer-menu {

@@ -37,9 +37,9 @@
 			<div class="col-md-6" *ngFor="let review of gameReviews ;let i=index" >
 				<a class="text-decoration-none" [href]="sanitize(review['site_detail_url'].__cdata)" target="_blank" >
 
-				<div class="review-item" *ngIf="i >= 4 && i <12">
-					<div class="review-cover set-bg" Style="background-image: url(../../assets/img/G_Spot2.jpg);">
-						<div class="score yellow">{{review['score']}}</div>
+				<div class="review-item" *ngIf="i >= 4 && i <12" >
+					<div class="review-cover set-bg" Style="background-image: url(../../assets/img/G_Spot2.jpg);" >
+						<div class="score yellow" >{{review['score']}}</div>
 					</div>
 					<div class="review-text">
 						<h4>{{review['title'].__cdata}}</h4>
