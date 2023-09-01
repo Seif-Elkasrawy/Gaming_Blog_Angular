@@ -132,7 +132,7 @@ ol {
 	display: inline-block;
 	text-align: center;
 	font-size: 15px;
-	color: #131313;
+	color: #03001C;
 	padding: 16px 30px;
 	min-width: 153px;
 	border-radius: 50px;
@@ -148,7 +148,7 @@ ol {
 }
 
 .site-btn:hover {
-	color: #131313;
+	color: #03001C;
 }
 
 .cata {
@@ -244,7 +244,7 @@ ol {
 ---------------------*/
 
 .header-section {
-	background: #131313;
+	background: #03001C;
 	clear: both;
 	overflow: hidden;
 	padding: 18px 0;
@@ -267,7 +267,7 @@ ol {
 
 .user-panel a {
 	font-size: 14px;
-	color: #131313;
+	color: #03001C;
 }
 
 .main-menu {
@@ -407,7 +407,7 @@ ol {
 	overflow: hidden;
 	display: block;
 	clear: both;
-	background: #131313;
+	background: #03001C;
 	padding: 24px 0;
 	position: relative;
 }
@@ -593,7 +593,7 @@ ol {
 	padding: 8px 21px;
 	font-size: 12px;
 	font-weight: 700;
-	color: #131313;
+	color: #03001C;
 	text-transform: uppercase;
 	background: #6F4A8E;
 }
@@ -888,7 +888,7 @@ ol {
 	text-align: center;
 	display: inline-block;
 	border-radius: 50%;
-	color: #131313;
+	color: #03001C;
 	margin-right: 10px;
 }
 
@@ -919,7 +919,7 @@ ol {
 
 .widget-item .latest-blog .lb-item .lb-content p,
 .widget-item .top-comment .tc-item .tc-content p {
-	color: #131313;
+	color: #03001C;
 }
 
 .widget-item .latest-blog .lb-item .lb-content .lb-author {
@@ -1052,7 +1052,7 @@ ol {
 
 .comment-list .comment .comment-content h5 {
 	font-size: 12px;
-	color: #131313;
+	color: #03001C;
 	font-weight: 400;
 	margin-bottom: 10px;
 }
@@ -1371,7 +1371,7 @@ ol {
 	}
 	.main-menu ul li a {
 		margin-left: 0;
-		color: #131313;
+		color: #03001C;
 		padding: 13px 26px;
 	}
 	.nav-switch {
