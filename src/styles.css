@@ -253,10 +253,11 @@ ol {
 
 .site-logo {
 	display: inline-block;
-	float: left;
-	padding-top: 6px;
+	float:left;
+	width: 200px;
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
-
 .user-panel {
 	float: right;
 	font-weight: 500;
