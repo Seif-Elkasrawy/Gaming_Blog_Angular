@@ -169,7 +169,7 @@ ol {
 }
 
 .cata.racing {
-	background: #694eae;
+	background: #35155D;
 }
 
 .cata.adventure {
@@ -403,44 +403,68 @@ ol {
 /*---------------------
   Latest News section
 -----------------------*/
-
-.latest-news-section {
+.latest-news-section{
 	overflow: hidden;
 	display: block;
 	clear: both;
 	background: #03001C;
 	padding: 24px 0;
 	position: relative;
+	height:60px;
 }
 
-.ln-title {
-	position: absolute;
+.latest-news-section .ln-title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 200;
 	height: 100%;
-	width: 29%;
 	left: 0;
 	top: 0;
-	text-align: right;
-	padding-top: 24px;
+	text-align:center;
 	padding-right: 66px;
+	padding-left: 66px;
 	font-size: 18px;
 	font-weight: 500;
 	color: #EBEBEB;
 	background: #6F4A8E;
-	z-index: 1;
 }
 
-.news-ticker {
-	width: 71%;
-	float: right;
-	overflow: hidden;
-	display: inline-block;
+.latest-news-section .news-ticker-contant {
+    display: flex;
+    list-style: none;
+    margin: 0;
+	text-align:center;
+	align-items: center;
+	margin-bottom: 100px;
+    animation: scroll 10s infinite linear;
 }
 
-.news-ticker-contant .nt-item {
+.latest-news-section .news-ticker-contant .nt-item {
+    white-space: nowrap;
+	margin-bottom: 100px;
+    position: relative;
 	margin-right: 35px;
 	color: #EBEBEB;
+	text-align:center;
+	align-items: center;
 	display: inline-block;
 }
+
+.latest-news-section .news-ticker-contant .nt-item::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.latest-news-section .news-ticker-contant .nt-item:last-child::after {
+    display: none;
+}
+
 
 .news-ticker-contant .nt-item span {
 	margin-right: 35px;
@@ -461,9 +485,18 @@ ol {
 }
 
 .news-ticker-contant .nt-item span.racing {
-	background: #694eae;
+	background: #301E67;
 }
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
 
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
 /*------------------
   Feature Section
 ---------------------*/
@@ -582,7 +615,7 @@ ol {
 	font-weight: 500;
 	color: #EBEBEB;
 	text-transform: uppercase;
-	background: #fb6e10;
+	background: #5B8FB9;
 }
 
 .tournament-item {
@@ -1140,6 +1173,7 @@ ol {
 	overflow: hidden;
 	border: 1px solid #878787;
 	background: #1f2225;
+	border-radius: 30px;
 }
 
 .community-post-list .community-post .author-avator {
@@ -1344,8 +1378,22 @@ ol {
 	-webkit-transform: scale(0.9);
 	transform: scale(0.9);
   }
-  
-
+  /* Grow */
+.hvr-grow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+  }
 /*------------------
   Responsive
 ---------------------*/
