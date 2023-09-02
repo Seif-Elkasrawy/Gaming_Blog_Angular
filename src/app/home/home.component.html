@@ -163,7 +163,7 @@
 
 
 <!-- Tournaments section -->
-<section class="tournaments-section spad">
+<section class="tournaments-section spad ">
 	<div class="container">
 		<div class="tournament-title">Free Games</div>
 		<div class="row" *ngIf="epicNews && epicNewsCS">
@@ -185,7 +185,7 @@
 				</a>
 			</div>
 			<div class="col-md-4" *ngFor="let eCSNews of epicNewsCS">
-				<a [href]="eCSNews['appUrl']" target="_blank">
+				<a class="text-decoration-none" [href]="eCSNews['appUrl']" target="_blank">
 					<div class="tournament-item">
 						<div class="ti-notic">Coming soon</div>
 						<div class="ti-content">
@@ -222,7 +222,7 @@
 						<div class="score yellow">{{rnews['score']}}</div>
 					</div>
 					<div class="review-text">
-						<a [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank">
+						<a class="text-decoration-none" [href]="sanitize(rnews['site_detail_url'].__cdata)" target="_blank">
 							<h5>{{rnews['title'].__cdata}}</h5>
 						</a>
 						<p>{{rnews['deck'].__cdata}}</p>

@@ -12,12 +12,14 @@ export class GamingNewsService {
   }
 
   headers = new HttpHeaders({
-    'x-rapidapi-host': 'epic-free-games.p.rapidapi.com',
-    'x-rapidapi-key': '48bdbc3571msh94ef5f4cb76590cp148103jsn88e9ba0ca5d7'
+    'X-RapidAPI-Host': 'epic-free-games.p.rapidapi.com',
+    'X-RapidAPI-Key': 'f1191ec646msh150bb303ee699afp1b539djsnfac08d036bc9'
   });
 
+
   getEpicNews(): any {
-    return this.httpClient.get('https://epic-free-games.p.rapidapi.com/epic-free-games', {headers: this.headers});
+    return this.httpClient.get(  'https://epic-free-games.p.rapidapi.com/epic-free-games'
+    , {headers: this.headers});
   }
 
   getEpicNewsCS(): any {
