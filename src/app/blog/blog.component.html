@@ -42,9 +42,9 @@
             <div class="row">
                 <div class="col-lg-8" >
                     <div class="row ">
-                        <div class="col-md-6" *ngFor="let article of gameSpotArticles ;let i = index" >
+                        <div class="col-md-6 hvr-shrink" *ngFor="let article of gameSpotArticles ;let i = index" >
                             <a class="text-decoration-none" [href]="sanitize(article['site_detail_url'].__cdata)" target="_blank">
-                            <div class="recent-game-item" *ngIf="i <8">
+                            <div class="recent-game-item " *ngIf="i <8">
                                 <div class="rgi-thumb set-bg"
                                     [ngStyle]="{ 'background-image': 'url(' + article['image'].screen_tiny.__cdata + ')'}">
                                 </div>
@@ -79,27 +79,29 @@
                         <h4 class="widget-title">Latest Posts</h4>
                         <div class="latest-blog">
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" data-setbg="../../assets/img/latest-blog/1.jpg"></div>
+                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/starfield.png);"></div>
                                 <div class="lb-content">
-                                    <div class="lb-date">June 21, 2018</div>
-                                    <p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
-                                    <a href="#" class="lb-author">By Admin</a>
+                                    <div class="lb-date">Starfield Review</div>
+                                    <p>Alright everybody, strap yourselves in. This is gonna be a bumpy ride.</p>
+                                    <a style="text-decoration: none;" class="lb-author">By Seif</a>
                                 </div>
                             </div>
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" data-setbg="../../assets/img/latest-blog/2.jpg"></div>
+                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/BG3.jpg);"></div>
                                 <div class="lb-content">
-                                    <div class="lb-date">June 21, 2018</div>
-                                    <p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
-                                    <a href="#" class="lb-author">By Admin</a>
+                                    <div class="lb-date">Minthara is finally getting the justice she deserves.</div>
+                                    <p>Baldur’s Gate 3 Devs Will Address ‘Very Stupid Bug’ Blocking 1500 Lines of Minthara
+                                        Content</p>
+                                    <a style="text-decoration: none;" class="lb-author">By Abdallah</a>
                                 </div>
                             </div>
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" data-setbg="../../assets/img/latest-blog/3.jpg"></div>
+                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/W4.jpg);"></div>
                                 <div class="lb-content">
-                                    <div class="lb-date">June 21, 2018</div>
-                                    <p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
-                                    <a href="#" class="lb-author">By Admin</a>
+                                    <div class="lb-date">A big development boost is coming.</div>
+                                    <p>The Witcher 4 Development Getting Big Boost From Cyberpunk Team Once Phantom Liberty
+                                        Launches</p>
+                                    <a style="text-decoration: none;" class="lb-author">By Marwa</a>
                                 </div>
                             </div>
                         </div>
@@ -109,27 +111,29 @@
                         <h4 class="widget-title">Top Comments</h4>
                         <div class="top-comment">
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" data-setbg="../../assets/img/authors/1.jpg"></div>
+                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/seif.png);"></div>
                                 <div class="tc-content">
-                                    <p><a href="#">James Smith</a> <span>on</span> Lorem consec
-                                        ipsum dolor sit amet, co</p>
-                                    <div class="tc-date">June 21, 2018</div>
+                                    <p><a href="#">Seifeldin Mostafa</a> <span>on</span> Ah. I guess this won't be one of those
+                                        wide-reaching with the mass audience games, but it sounds perfect for what I'm
+                                        personally looking for.</p>
+                                    <div class="tc-date">September 2, 2023</div>
                                 </div>
                             </div>
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" data-setbg="../../assets/img/authors/2.jpg"></div>
+                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/marwa.png);"></div>
                                 <div class="tc-content">
-                                    <p><a href="#">Michael James</a> <span>on</span>Cras sit amet
-                                        sapien aliquam</p>
-                                    <div class="tc-date">June 21, 2018</div>
+                                    <p><a href="#">Marwa Magdy</a> <span>on</span>I have a bad feeling that they're going
+                                        to take the Netflix approach of trying to shoehorn modern elements into a non-modern
+                                        setting with TW4.</p>
+                                    <div class="tc-date">September 1, 2022</div>
                                 </div>
                             </div>
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" data-setbg="../../assets/img/authors/3.jpg"></div>
+                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/Abdallah.png);"></div>
                                 <div class="tc-content">
-                                    <p><a href="#">Justin More</a> <span>on</span> Lorem ipsum dolor
-                                        consecsit amet, co</p>
-                                    <div class="tc-date">June 21, 2018</div>
+                                    <p><a href="#">Abdallah Adel</a> <span>on</span> Having just started act 3, I think I
+                                        will pause until this patch comes out</p>
+                                    <div class="tc-date">August 29, 2021</div>
                                 </div>
                             </div>
                         </div>
