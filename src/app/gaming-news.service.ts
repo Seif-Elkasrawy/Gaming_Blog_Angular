@@ -13,7 +13,7 @@ export class GamingNewsService {
 
   headers = new HttpHeaders({
     'X-RapidAPI-Host': 'epic-free-games.p.rapidapi.com',
-    'X-RapidAPI-Key': 'f1191ec646msh150bb303ee699afp1b539djsnfac08d036bc9'
+    'X-RapidAPI-Key': 'd49d51ad85msh8f5a2031164d357p1b6087jsnbc11e69f5d80 '
   });
 
 
