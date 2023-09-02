@@ -1,14 +1,14 @@
 <!-- Latest news section -->
 <div class="latest-news-section">
-	<div class="ln-title">Latest News</div>
-	<ul class="news-ticker-contant">
-		<li class="nt-item"><span class="new">new</span>Highly-Anticipated Game 'Cyberverse' Release Date Announced!
-		</li>
-		<li class="nt-item"><span class="strategy">strategy</span>New Real-Time Strategy Game 'Epoch Wars' Offers
-			Tactical Brilliance! </li>
-		<li class="nt-item"><span class="racing">racing</span>'Velocity Rush' Racing Game Revs Up Excitement with
-			Thrilling Tracks and High-Speed Action!</li>
-	</ul>
+    <div class="ln-title">Latest News</div>
+    <ul class="news-ticker-contant">
+        <li class="nt-item"><span class="new">new</span>Highly-Anticipated Game 'Cyberverse' Release Date Announced!
+        </li>
+        <li class="nt-item"><span class="strategy">strategy</span>New Real-Time Strategy Game 'Epoch Wars' Offers
+            Tactical Brilliance! </li>
+        <li class="nt-item"><span class="racing">racing</span>'Velocity Rush' Racing Game Revs Up Excitement with
+            Thrilling Tracks and High-Speed Action!</li>
+    </ul>
 </div>
 <!-- Latest news section end -->
 
@@ -22,10 +22,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 text-white">
-                        <h2>Video Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada
-                            lorem maximus mauris
-                            scelerisque, at rutrum nulla dictum.</p>
+                        <h2>Blog Posts</h2>
+                        <p>Your ultimate destination for all things gaming! We're here to keep you informed and
+                            entertained with a diverse range of posts that cater to every gamer's appetite</p>
                     </div>
                 </div>
             </div>
@@ -38,32 +37,34 @@
     <section class="page-section recent-game-page spad" *ngIf="gameSpotArticles">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8" >
+                <div class="col-lg-8">
                     <div class="row ">
-                        <div class="col-md-6 hvr-shrink" *ngFor="let article of gameSpotArticles ;let i = index" >
-                            <a class="text-decoration-none" [href]="sanitize(article['site_detail_url'].__cdata)" target="_blank">
-                            <div class="recent-game-item " *ngIf="i <8">
-                                <div class="rgi-thumb set-bg"
-                                    [ngStyle]="{ 'background-image': 'url(' + article['image'].screen_tiny.__cdata + ')'}">
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>{{article['title'].__cdata}}</h5>
-                                    <p>{{article['deck'].__cdata}} </p>
-                                    <h6>Author {{article['authors'].__cdata}} </h6>
+                        <div class="col-md-6 hvr-shrink" *ngFor="let article of gameSpotArticles ;let i = index">
+                            <a class="text-decoration-none" [href]="sanitize(article['site_detail_url'].__cdata)"
+                                target="_blank">
+                                <div class="recent-game-item " *ngIf="i <8">
+                                    <div class="rgi-thumb set-bg"
+                                        [ngStyle]="{ 'background-image': 'url(' + article['image'].screen_tiny.__cdata + ')'}">
+                                    </div>
+                                    <div class="rgi-content">
+                                        <h5>{{article['title'].__cdata}}</h5>
+                                        <p>{{article['deck'].__cdata}} </p>
+                                        <h6>Author {{article['authors'].__cdata}} </h6>
 
-                                    <div class="rgi-extra">
-                                        <a href="">
-                                            <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt="">
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="rgi-heart"><img src="../../assets/img/icons/heart.png" alt="">
-                                            </div>
-                                        </a>
+                                        <div class="rgi-extra">
+                                            <a href="">
+                                                <div class="rgi-star"><img src="../../assets/img/icons/star.png" alt="">
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="rgi-heart"><img src="../../assets/img/icons/heart.png"
+                                                        alt="">
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                         </div>
                     </div>
 
@@ -71,13 +72,14 @@
                 <!-- sidebar -->
                 <div class="col-lg-4 col-md-7 sidebar pt-5 pt-lg-0">
                     <!-- widget -->
-                  
+
                     <!-- widget -->
                     <div class="widget-item">
                         <h4 class="widget-title">Latest Posts</h4>
                         <div class="latest-blog">
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/starfield.png);"></div>
+                                <div class="lb-thumb set-bg"
+                                    style="background-image: url(../../assets/img/starfield.png);"></div>
                                 <div class="lb-content">
                                     <div class="lb-date">Starfield Review</div>
                                     <p>Alright everybody, strap yourselves in. This is gonna be a bumpy ride.</p>
@@ -85,19 +87,23 @@
                                 </div>
                             </div>
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/BG3.jpg);"></div>
+                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/BG3.jpg);">
+                                </div>
                                 <div class="lb-content">
                                     <div class="lb-date">Minthara is finally getting the justice she deserves.</div>
-                                    <p>Baldur’s Gate 3 Devs Will Address ‘Very Stupid Bug’ Blocking 1500 Lines of Minthara
+                                    <p>Baldur’s Gate 3 Devs Will Address ‘Very Stupid Bug’ Blocking 1500 Lines of
+                                        Minthara
                                         Content</p>
                                     <a style="text-decoration: none;" class="lb-author">By Abdallah</a>
                                 </div>
                             </div>
                             <div class="lb-item">
-                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/W4.jpg);"></div>
+                                <div class="lb-thumb set-bg" style="background-image: url(../../assets/img/W4.jpg);">
+                                </div>
                                 <div class="lb-content">
                                     <div class="lb-date">A big development boost is coming.</div>
-                                    <p>The Witcher 4 Development Getting Big Boost From Cyberpunk Team Once Phantom Liberty
+                                    <p>The Witcher 4 Development Getting Big Boost From Cyberpunk Team Once Phantom
+                                        Liberty
                                         Launches</p>
                                     <a style="text-decoration: none;" class="lb-author">By Marwa</a>
                                 </div>
@@ -109,27 +115,34 @@
                         <h4 class="widget-title">Top Comments</h4>
                         <div class="top-comment">
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/seif.png);"></div>
+                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/seif.png);">
+                                </div>
                                 <div class="tc-content">
-                                    <p><a href="#">Seifeldin Mostafa</a> <span>on</span> Ah. I guess this won't be one of those
+                                    <p><a href="#">Seifeldin Mostafa</a> <span>on</span> Ah. I guess this won't be one
+                                        of those
                                         wide-reaching with the mass audience games, but it sounds perfect for what I'm
                                         personally looking for.</p>
                                     <div class="tc-date">September 2, 2023</div>
                                 </div>
                             </div>
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/marwa.png);"></div>
+                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/marwa.png);">
+                                </div>
                                 <div class="tc-content">
-                                    <p><a href="#">Marwa Magdy</a> <span>on</span>I have a bad feeling that they're going
-                                        to take the Netflix approach of trying to shoehorn modern elements into a non-modern
+                                    <p><a href="#">Marwa Magdy</a> <span>on</span>I have a bad feeling that they're
+                                        going
+                                        to take the Netflix approach of trying to shoehorn modern elements into a
+                                        non-modern
                                         setting with TW4.</p>
                                     <div class="tc-date">September 1, 2022</div>
                                 </div>
                             </div>
                             <div class="tc-item">
-                                <div class="tc-thumb set-bg" style="background-image: url(../../assets/img/Abdallah.png);"></div>
+                                <div class="tc-thumb set-bg"
+                                    style="background-image: url(../../assets/img/Abdallah.png);"></div>
                                 <div class="tc-content">
-                                    <p><a href="#">Abdallah Adel</a> <span>on</span> Having just started act 3, I think I
+                                    <p><a href="#">Abdallah Adel</a> <span>on</span> Having just started act 3, I think
+                                        I
                                         will pause until this patch comes out</p>
                                     <div class="tc-date">August 29, 2021</div>
                                 </div>
@@ -137,22 +150,23 @@
                         </div>
                     </div>
                     <!-- widget -->
-                    <div class="mb-4"  *ngFor="let article of gameSpotArticles ;let i = index ">
+                    <div class="mb-4" *ngFor="let article of gameSpotArticles ;let i = index ">
                         <div class="widget-item" *ngIf="i >=98">
                             <a [href]="sanitize(article['site_detail_url'].__cdata)" target="_blank">
-                            <div class="feature-item set-bg"  [ngStyle]="{ 'background-image': 'url(' + article['image'].original.__cdata + ')'}" >
-                                <span class="cata new">new</span>
-                                <div class="fi-content text-white">
-                                    <h5>{{article['title'].__cdata}}</h5>
-                                    <p>{{article['deck'].__cdata}} </p>
-                                    <h6>Author {{article['authors'].__cdata}}</h6>
+                                <div class="feature-item set-bg"
+                                    [ngStyle]="{ 'background-image': 'url(' + article['image'].original.__cdata + ')'}">
+                                    <span class="cata new">new</span>
+                                    <div class="fi-content text-white">
+                                        <h5>{{article['title'].__cdata}}</h5>
+                                        <p>{{article['deck'].__cdata}} </p>
+                                        <h6>Author {{article['authors'].__cdata}}</h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                         </div>
                     </div>
                     <!-- widget -->
-                
+
                 </div>
             </div>
         </div>
